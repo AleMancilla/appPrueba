@@ -42,6 +42,34 @@ class page1 extends StatelessWidget {
             ),
           ),
 
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Icon(Icons.call,color: Colors.blueAccent, size: 40.0,),
+                    Text("Call", style: TextStyle(color: Colors.blueAccent,fontSize: 15.0),)
+                  ],
+                ),
+                SizedBox(width: 35.0,),
+                Column(
+                  children: <Widget>[
+                    Icon(Icons.near_me,color: Colors.blueAccent, size: 40.0,),
+                    Text("Route", style: TextStyle(color: Colors.blueAccent,fontSize: 15.0),)
+                  ],
+                ),
+                SizedBox(width: 35.0,),
+                Column(
+                  children: <Widget>[
+                    Icon(Icons.share,color: Colors.blueAccent, size: 40.0,),
+                    Text("Share", style: TextStyle(color: Colors.blueAccent,fontSize: 15.0),)
+                  ],
+                )
+              ],
+            ),
+          )
+
         ],
       ),
     ),
