@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practica_flutter/pages/pagaScroll.dart';
 import 'package:practica_flutter/pages/page1.dart';
 
 void main() => runApp(MyApp());
@@ -10,9 +11,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      initialRoute: '/',
+      initialRoute: '/pageScroll',
       routes: {
         '/' : (BuildContext context) => page1(),
+        '/pageScroll' : (BuildContext context) => PageScroll(),
       },
     );
   }
