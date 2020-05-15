@@ -21,7 +21,9 @@ class PageScroll extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Container(
-            color: Colors.lightBlue,
+            width: double.infinity, 
+            height: double.infinity,
+            color: Color.fromRGBO(108, 192, 2018, 1.0),
           ),
           Image(
             image: AssetImage('assets/scroll.png'),
@@ -43,8 +45,19 @@ class PageScroll extends StatelessWidget {
   }
 
   Widget _page2() {
-    return Center(
-      child: null,
+    return Container(
+      width: double.infinity,
+      height: double.infinity,
+      color: Color.fromRGBO(108, 192, 2018, 1.0),
+      child: Center(
+        child: RaisedButton(
+          shape: StadiumBorder(),
+          child: Padding(padding: EdgeInsets.all(20),child: Text("Hola Mundo"),),
+          color: Colors.blue,
+          textColor: Colors.white,
+          onPressed: (){}
+        ),
+      ),
     );
   }
 }
