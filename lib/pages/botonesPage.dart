@@ -124,33 +124,33 @@ class BotonoesPage extends StatelessWidget {
       children: [
         TableRow(
           children: [
-            _crearTableBoton(),
-            _crearTableBoton(),
+            _crearTableBoton(Colors.blue, Icons.accessible,"hola M"),
+            _crearTableBoton(Colors.pink, Icons.accessible_forward,"Marii"),
           ]
         ),
         TableRow(
           children: [
-            _crearTableBoton(),
-            _crearTableBoton(),
+            _crearTableBoton(Colors.yellow, Icons.account_circle,"Preciosa"),
+            _crearTableBoton(Colors.red, Icons.add_shopping_cart,"hermoza"),
           ]
         ),
         TableRow(
           children: [
-            _crearTableBoton(),
-            _crearTableBoton(),
+            _crearTableBoton(Colors.white, Icons.usb,"Princesa"),
+            _crearTableBoton(Colors.black, Icons.radio,"bb brrrr"),
           ]
         ),
         TableRow(
           children: [
-            _crearTableBoton(),
-            _crearTableBoton(),
+            _crearTableBoton(Colors.blue, Icons.accessible,"hola M"),
+            _crearTableBoton(Colors.blue, Icons.accessible,"hola M"),
           ]
         ),
       ],
     );
   }
 
-  Widget _crearTableBoton() {
+  Widget _crearTableBoton(Color color, IconData icono, String texto) {
     return Container(
             margin: EdgeInsets.all(10.0),
       child: ClipRRect(
@@ -169,11 +169,13 @@ class BotonoesPage extends StatelessWidget {
               children: <Widget>[
                 CircleAvatar(
                   radius: 30,
-                  backgroundColor: Colors.pinkAccent,
-                  child: Icon(Icons.accessibility_new,size: 40.0,),
+                  backgroundColor: color,
+                  child: Icon(
+                    icono,
+                    size: 40.0,),
                 ),
                 SizedBox(height: 10.0,),
-                Text("TextoTitle",style: TextStyle(color: Colors.white),)
+                Text(texto,style: TextStyle(color: Colors.white),)
               ],
             ),
           ),
