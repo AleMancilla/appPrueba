@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -151,24 +152,32 @@ class BotonoesPage extends StatelessWidget {
 
   Widget _crearTableBoton() {
     return Container(
-      margin: EdgeInsets.all(10.0),
-      height: 150,
-      decoration: BoxDecoration(
+            margin: EdgeInsets.all(10.0),
+      child: ClipRRect(
+              borderRadius: BorderRadius.circular(25.0),
+            child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 10,sigmaY: 10),
+          child: Container(
+            height: 150,
+            decoration: BoxDecoration(
 
-        borderRadius: BorderRadius.circular(25.0),
-        color: Color.fromRGBO(62, 66, 107, 0.7),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          CircleAvatar(
-            radius: 30,
-            backgroundColor: Colors.pinkAccent,
-            child: Icon(Icons.accessibility_new,size: 40.0,),
+              borderRadius: BorderRadius.circular(25.0),
+              color: Color.fromRGBO(62, 66, 107, 0.7),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                CircleAvatar(
+                  radius: 30,
+                  backgroundColor: Colors.pinkAccent,
+                  child: Icon(Icons.accessibility_new,size: 40.0,),
+                ),
+                SizedBox(height: 10.0,),
+                Text("TextoTitle",style: TextStyle(color: Colors.white),)
+              ],
+            ),
           ),
-          SizedBox(height: 10.0,),
-          Text("TextoTitle",style: TextStyle(color: Colors.white),)
-        ],
+        ),
       ),
     );
   }
