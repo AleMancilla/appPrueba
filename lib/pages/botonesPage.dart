@@ -1,15 +1,20 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class BotonoesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light.copyWith(statusBarColor: Colors.black));
+
     return Scaffold(
       body: Stack(
         children: <Widget>[
-          _fondo()
+          _fondo(),
+          _titulos(),
         ],
       ),
     );
@@ -60,5 +65,21 @@ class BotonoesPage extends StatelessWidget {
         )
         
     ],);
+  }
+
+  Widget _titulos() {
+    return SafeArea(
+      child: Container(
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text('Incididunt ', style: TextStyle(color: Colors.white,fontSize: 30.0,fontWeight: FontWeight.bold)),
+            SizedBox(height: 5.0,),
+            Text('Pariatur veniam fugiat.', style: TextStyle(color: Colors.white,fontSize: 20.0 ,fontWeight: FontWeight.normal)),
+          ],
+        ),
+      )
+    );
   }
 }
