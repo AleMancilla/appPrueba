@@ -15,7 +15,12 @@ class BotonoesPage extends StatelessWidget {
         children: <Widget>[
           _fondo(),
           SingleChildScrollView(
-            child: _titulos(),
+            child: Column(
+              children: <Widget>[
+                _titulos(),
+                _botonesRedondeados(),
+              ],
+            ),
           )
           
         ],
@@ -110,6 +115,61 @@ class BotonoesPage extends StatelessWidget {
           ],
         ),
       )
+    );
+  }
+
+  Widget _botonesRedondeados() {
+    return Table(
+      children: [
+        TableRow(
+          children: [
+            _crearTableBoton(),
+            _crearTableBoton(),
+          ]
+        ),
+        TableRow(
+          children: [
+            _crearTableBoton(),
+            _crearTableBoton(),
+          ]
+        ),
+        TableRow(
+          children: [
+            _crearTableBoton(),
+            _crearTableBoton(),
+          ]
+        ),
+        TableRow(
+          children: [
+            _crearTableBoton(),
+            _crearTableBoton(),
+          ]
+        ),
+      ],
+    );
+  }
+
+  Widget _crearTableBoton() {
+    return Container(
+      margin: EdgeInsets.all(10.0),
+      height: 150,
+      decoration: BoxDecoration(
+
+        borderRadius: BorderRadius.circular(25.0),
+        color: Color.fromRGBO(62, 66, 107, 0.7),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          CircleAvatar(
+            radius: 30,
+            backgroundColor: Colors.pinkAccent,
+            child: Icon(Icons.accessibility_new,size: 40.0,),
+          ),
+          SizedBox(height: 10.0,),
+          Text("TextoTitle",style: TextStyle(color: Colors.white),)
+        ],
+      ),
     );
   }
 }
